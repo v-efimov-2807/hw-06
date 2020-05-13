@@ -1,0 +1,147 @@
+body {
+  font-family: 'Roboto';
+}
+
+.header {
+    font-size: 40px;
+    text-transform: uppercase;   
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.header__logo {
+    height: 36px;
+}
+
+.header__title::after {
+    display: block;
+    margin: 10px auto;
+    width: 100px;
+
+    content: "";
+
+    border-bottom: 3px solid #000000;
+}
+
+.content {
+    width: 900px;
+    margin: 50px auto;
+}
+
+.content__description {
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.content__persons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 250px;
+    margin-bottom: 10px;
+}
+
+.person:hover {
+    border-radius: 5px;
+    box-shadow:  0 0 10px rgba(0,0,0,0.5);
+}
+
+.person__avatar {
+    width: 250px;
+    height: 250px;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    margin-bottom: 10px;
+}
+
+.person__name {
+    width: 250px;
+    
+    font-size: 20px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    margin-bottom: 3px;
+}
+
+.person__education {
+    font-size: 18px;
+    text-align: center;
+    color: #808080;
+
+    margin-bottom: 15px;
+}
+
+.personPopup {
+    width: 550px;
+    height: 230px;
+    padding: 10px;
+    position: absolute;
+    z-index: 2;
+    border-radius: 5px;
+
+    font-size: 20px;
+    box-shadow:  0 0 10px rgba(0,0,0,0.5);
+    background-color: #ffffff;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.personPopup__avatar {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+.personPopup__info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.personPopup__name {
+    font-size: 26px;
+    font-weight: bold;
+    height: 40px;
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.personPopup__wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.personPopup__birthDate, .personPopup__education, .personPopup__caption {
+    width: 49%;
+}
+
+.personPopup__caption {
+    color: #808080;
+}
+
+.personPopup__exit {
+    cursor: pointer;
+    position: absolute;
+    z-index: 5;
+}
